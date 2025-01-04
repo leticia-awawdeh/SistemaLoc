@@ -11,12 +11,12 @@ import javax.swing.text.MaskFormatter;
  *
  * @author leticia
  */
-public class CadastroClienteUI extends javax.swing.JPanel {
+public class ClienteUI extends javax.swing.JPanel {
 
     /**
      * Creates new form CadastroCliente
      */
-    public CadastroClienteUI() {
+    public ClienteUI() {
         initComponents();
         aplicarMascaras();
         
@@ -65,6 +65,10 @@ public class CadastroClienteUI extends javax.swing.JPanel {
         btnCadCli = new javax.swing.JButton();
         btnCancelarCadCli = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(616, 616));
+
+        panelCadCli.setPreferredSize(new java.awt.Dimension(616, 616));
+
         lblNomeCli.setText("Nome Completo:");
 
         jLabel1.setText("CPF:");
@@ -90,54 +94,57 @@ public class CadastroClienteUI extends javax.swing.JPanel {
         panelCadCliLayout.setHorizontalGroup(
             panelCadCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCadCliLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelCadCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblNomeCli)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
                 .addGroup(panelCadCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelCadCliLayout.createSequentialGroup()
-                        .addGroup(panelCadCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtTelefoneCli, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCpfCli, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(panelCadCliLayout.createSequentialGroup()
+                        .addGap(79, 79, 79)
                         .addGroup(panelCadCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtNomeCli, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelCadCliLayout.createSequentialGroup()
-                                .addComponent(btnCadCli)
-                                .addGap(103, 103, 103)
-                                .addComponent(btnCancelarCadCli)))
-                        .addGap(155, 155, 155))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblNomeCli))
+                            .addGroup(panelCadCliLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(panelCadCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2))))
+                        .addGap(18, 44, Short.MAX_VALUE)
+                        .addGroup(panelCadCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtCpfCli, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNomeCli, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTelefoneCli, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelCadCliLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCadCli, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49)
+                        .addComponent(btnCancelarCadCli, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(158, 158, 158))
         );
         panelCadCliLayout.setVerticalGroup(
             panelCadCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCadCliLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(123, 123, 123)
                 .addGroup(panelCadCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNomeCli)
-                    .addComponent(txtNomeCli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(txtNomeCli, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addGroup(panelCadCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtCpfCli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(txtCpfCli, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(54, 54, 54)
                 .addGroup(panelCadCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtTelefoneCli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                    .addComponent(txtTelefoneCli, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(74, 74, 74)
                 .addGroup(panelCadCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCadCli)
-                    .addComponent(btnCancelarCadCli))
-                .addGap(68, 68, 68))
+                    .addComponent(btnCadCli, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCancelarCadCli, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(139, 139, 139))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelCadCli, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 601, Short.MAX_VALUE)
+            .addComponent(panelCadCli, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 765, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,7 +212,7 @@ public class CadastroClienteUI extends javax.swing.JPanel {
         txtNomeCli.setText("");
         txtCpfCli.setValue(null);
         txtTelefoneCli.setValue(null);
-    
+
     }//GEN-LAST:event_btnCadCliActionPerformed
 
 

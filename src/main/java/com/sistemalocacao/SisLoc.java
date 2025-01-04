@@ -21,7 +21,7 @@ private final List<Cliente> clientes;
         initComponents();
         
 
-        CadastroClienteUI cadastroCliente = new CadastroClienteUI();
+        ClienteUI cadastroCliente = new ClienteUI();
         panelSis.addTab("Cadastro de Cliente", cadastroCliente.getPanel());
         
         EquipamentoUI cadastroEquip = new EquipamentoUI();
@@ -39,7 +39,7 @@ private final List<Cliente> clientes;
         setContentPane(panelSis);
         setTitle("Sistema de Locação de Equipamentos");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 400);
+        setSize(616, 616);
         setLocationRelativeTo(null);
     }
 
@@ -56,17 +56,17 @@ private final List<Cliente> clientes;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        panelSis.setPreferredSize(new java.awt.Dimension(616, 616));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(panelSis, javax.swing.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(panelSis, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelSis, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(panelSis, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE)
         );
 
         pack();

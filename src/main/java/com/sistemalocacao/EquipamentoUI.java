@@ -88,9 +88,19 @@ private void formatInput() {
         jButton1 = new javax.swing.JButton();
         txtNomeEquip = new javax.swing.JTextField();
 
+        setOpaque(false);
+
+        panelEquip.setPreferredSize(new java.awt.Dimension(616, 616));
+
         jLabel1.setText("Nome do Equipamento:");
 
         jLabel2.setText("Descrição (opcional):");
+
+        txtDescricaoEquip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDescricaoEquipActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Valor da Locação diária: R$");
 
@@ -114,56 +124,69 @@ private void formatInput() {
             }
         });
 
+        txtNomeEquip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeEquipActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelEquipLayout = new javax.swing.GroupLayout(panelEquip);
         panelEquip.setLayout(panelEquipLayout);
         panelEquipLayout.setHorizontalGroup(
             panelEquipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelEquipLayout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addGroup(panelEquipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnCadEquip)
-                    .addGroup(panelEquipLayout.createSequentialGroup()
-                        .addGroup(panelEquipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addGroup(panelEquipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelEquipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelEquipLayout.createSequentialGroup()
+                        .addGap(190, 190, 190)
+                        .addComponent(txtDescricaoEquip, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelEquipLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(panelEquipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelEquipLayout.createSequentialGroup()
                                 .addComponent(jLabel1)
-                                .addComponent(jLabel2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelEquipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtDescricaoEquip, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
-                            .addComponent(txtValorDiaria)
-                            .addComponent(txtNomeEquip))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addComponent(txtNomeEquip))
+                            .addComponent(jLabel2)))
+                    .addGroup(panelEquipLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtValorDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(181, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEquipLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnCadEquip, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
         panelEquipLayout.setVerticalGroup(
             panelEquipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelEquipLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(81, 81, 81)
                 .addGroup(panelEquipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtNomeEquip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51)
+                .addGap(78, 78, 78)
                 .addGroup(panelEquipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtDescricaoEquip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                    .addComponent(txtDescricaoEquip, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(64, 64, 64)
                 .addGroup(panelEquipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtValorDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                    .addComponent(txtValorDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(53, 53, 53)
                 .addGroup(panelEquipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCadEquip)
-                    .addComponent(jButton1))
-                .addContainerGap())
+                    .addComponent(btnCadEquip, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelEquip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelEquip, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,6 +236,14 @@ private void formatInput() {
     private void txtValorDiariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtValorDiariaActionPerformed
 
     }//GEN-LAST:event_txtValorDiariaActionPerformed
+
+    private void txtDescricaoEquipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescricaoEquipActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDescricaoEquipActionPerformed
+
+    private void txtNomeEquipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeEquipActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeEquipActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

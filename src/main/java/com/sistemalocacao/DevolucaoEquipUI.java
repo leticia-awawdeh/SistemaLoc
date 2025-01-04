@@ -70,16 +70,16 @@ public class DevolucaoEquipUI extends javax.swing.JPanel {
         Equipamento equipamento = locacao.getEquipamento();
 
         txtResult.setText(String.format(
-                "<html>Equipamento: %s<br>" +
-                        "Cliente: %s<br>" +
-                        "Data de Empréstimo: %s<br>" +
-                        "Data Prevista de Devolução: %s<br>" +
-                        "Valor da Locação: R$ %s</html>",
-                equipamento.getNome(),
-                cliente.getNomeCli(),
-                locacao.getDataInicio().format(dateFormatter),
-                locacao.getDataPrevistaDevolucao().format(dateFormatter),
-                Utils.formatarMonetario(equipamento.getValorDiario())
+                "Equipamento: %s\n" +
+                "Cliente: %s\n" +
+                "Data de Empréstimo: %s\n" +
+                "Data Prevista de Devolução: %s\n" +
+                "Valor da Locação: R$ %s",
+            equipamento.getNome(),
+            cliente.getNomeCli(),
+            locacao.getDataInicio().format(dateFormatter),
+            locacao.getDataPrevistaDevolucao().format(dateFormatter),
+            Utils.formatarMonetario(equipamento.getValorDiario())
         ));
 
         // Armazenar o equipamento no painel
@@ -122,22 +122,22 @@ public class DevolucaoEquipUI extends javax.swing.JPanel {
         }
 
         txtResult.setText(String.format(
-                "<html>Resumo da Devolução:<br><br>" +
-                        "Equipamento: %s<br>" +
-                        "Data Prevista de Término: %s<br>" +
-                        "Data de Devolução: %s<br>" +
-                        "Multa por atraso: R$ %s<br>" +
-                        "Valor do Aluguel: R$ %s<br>" +
-                        "Total a Pagar: R$ %s</html>",
-                equipamento.getNome(),
-                locacao.getDataPrevistaDevolucao().format(dateFormatter),
-                dataDevolucao.format(dateFormatter),
-                Utils.formatarMonetario(multa),
-                Utils.formatarMonetario(valorAluguel),
-                Utils.formatarMonetario(total)
-        ));
+        "Resumo da Devolução:\n\n" +
+        "Equipamento: %s\n" +
+        "Data Prevista de Término: %s\n" +
+        "Data de Devolução: %s\n" +
+        "Multa por atraso: R$ %s\n" +
+        "Valor do Aluguel: R$ %s\n" +
+        "Total a Pagar: R$ %s",
+        equipamento.getNome(),
+        locacao.getDataPrevistaDevolucao().format(dateFormatter),
+        dataDevolucao.format(dateFormatter),
+        Utils.formatarMonetario(multa),
+        Utils.formatarMonetario(valorAluguel),
+        Utils.formatarMonetario(total)
+    ));
 
-        txtResult.putClientProperty("locacaoSelecionada", null);
+txtResult.putClientProperty("locacaoSelecionada", null);
     }
 
     private void confirmarPagamento() {
@@ -172,6 +172,8 @@ public class DevolucaoEquipUI extends javax.swing.JPanel {
         btnConfPag = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtResult = new javax.swing.JTextArea();
+
+        panelDevolucao.setPreferredSize(new java.awt.Dimension(616, 616));
 
         jLabel1.setText("CPF:");
 
@@ -210,18 +212,18 @@ public class DevolucaoEquipUI extends javax.swing.JPanel {
                         .addGap(87, 87, 87)
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addGroup(panelDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(panelDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnBuscarLoc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtCpfCli))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(126, 126, 126))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDevolucaoLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1))
                     .addGroup(panelDevolucaoLayout.createSequentialGroup()
-                        .addGap(0, 6, Short.MAX_VALUE)
-                        .addComponent(btnConfDevolucao)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                        .addComponent(btnConfPag)))
+                        .addContainerGap()
+                        .addComponent(btnConfDevolucao, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addComponent(btnConfPag, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         panelDevolucaoLayout.setVerticalGroup(
@@ -234,12 +236,12 @@ public class DevolucaoEquipUI extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(btnBuscarLoc)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(panelDevolucaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnConfDevolucao)
-                    .addComponent(btnConfPag))
-                .addContainerGap())
+                    .addComponent(btnConfDevolucao, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnConfPag, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

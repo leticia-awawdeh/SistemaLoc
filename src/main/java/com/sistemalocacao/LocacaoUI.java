@@ -8,12 +8,12 @@ package com.sistemalocacao;
  *
  * @author leticia
  */
-public class RegistroLocacao extends javax.swing.JPanel {
+public class LocacaoUI extends javax.swing.JPanel {
 
     /**
      * Creates new form RegistroLocacao
      */
-    public RegistroLocacao() {
+    public LocacaoUI() {
         initComponents();
     }
 
@@ -26,19 +26,33 @@ public class RegistroLocacao extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelRegistroLocacao = new javax.swing.JPanel();
+
+        javax.swing.GroupLayout panelRegistroLocacaoLayout = new javax.swing.GroupLayout(panelRegistroLocacao);
+        panelRegistroLocacao.setLayout(panelRegistroLocacaoLayout);
+        panelRegistroLocacaoLayout.setHorizontalGroup(
+            panelRegistroLocacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        panelRegistroLocacaoLayout.setVerticalGroup(
+            panelRegistroLocacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(panelRegistroLocacao, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(panelRegistroLocacao, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel panelRegistroLocacao;
     // End of variables declaration//GEN-END:variables
 }

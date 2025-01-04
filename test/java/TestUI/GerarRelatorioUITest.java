@@ -3,7 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
 
-import com.sistemalocacao.*;
+import SistemaLocacao.UI.GerarRelatorioUI;
+import SistemaLocacao.Classes.Locacao;
+import SistemaLocacao.Classes.GerenciadorDados;
+import SistemaLocacao.Classes.Cliente;
+import SistemaLocacao.Classes.Equipamento;
 import java.io.File;
 import java.time.LocalDate;
 import java.util.ArrayList;

@@ -3,8 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
 
-import com.sistemalocacao.*;
-import com.sistemalocacao.Cliente;
+import SistemaLocacao.Classes.GerenciadorDados;
+import SistemaLocacao.Classes.Cliente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import org.junit.jupiter.api.Test;

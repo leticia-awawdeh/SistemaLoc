@@ -3,9 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
 
+import SistemaLocacao.Classes.GerenciadorDados;
+import SistemaLocacao.Classes.Cliente;
+import SistemaLocacao.Classes.Equipamento;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import com.sistemalocacao.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -57,6 +59,6 @@ public class GerenciadorDadosTest {
         GerenciadorDados.registrarLocacao(cliente, equipamento);
 
         assertEquals(cliente, equipamento.getCliente());
-        assertEquals(com.sistemalocacao.Status.ALUGADO, equipamento.getStatus());
+        assertEquals(SistemaLocacao.Classes.Status.ALUGADO, equipamento.getStatus());
     }
 }

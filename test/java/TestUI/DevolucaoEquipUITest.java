@@ -4,9 +4,13 @@
  */
 
 
+import SistemaLocacao.Classes.Locacao;
+import SistemaLocacao.Classes.GerenciadorDados;
+import SistemaLocacao.Classes.Status;
+import SistemaLocacao.Classes.Cliente;
+import SistemaLocacao.Classes.Equipamento;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import com.sistemalocacao.*;
 import java.time.LocalDate;
 
 /**

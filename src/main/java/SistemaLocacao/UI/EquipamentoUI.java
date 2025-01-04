@@ -2,8 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package com.sistemalocacao;
+package SistemaLocacao.UI;
 
+import SistemaLocacao.Classes.Utils;
+import SistemaLocacao.Classes.GerenciadorDados;
+import SistemaLocacao.Classes.Equipamento;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;

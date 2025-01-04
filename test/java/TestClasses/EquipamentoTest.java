@@ -3,8 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
 
+import SistemaLocacao.Classes.Status;
+import SistemaLocacao.Classes.Equipamento;
 import org.junit.jupiter.api.Test;
-import com.sistemalocacao.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

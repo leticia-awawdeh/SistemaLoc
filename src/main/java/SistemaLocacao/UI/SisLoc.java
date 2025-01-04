@@ -2,8 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.sistemalocacao;
+package SistemaLocacao.UI;
 
+import SistemaLocacao.UI.LocacaoUI;
+import SistemaLocacao.UI.GerarRelatorioUI;
+import SistemaLocacao.UI.EquipamentoUI;
+import SistemaLocacao.UI.DevolucaoEquipUI;
+import SistemaLocacao.UI.ClienteUI;
+import SistemaLocacao.Classes.Cliente;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;

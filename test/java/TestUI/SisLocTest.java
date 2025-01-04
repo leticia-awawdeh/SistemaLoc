@@ -1,4 +1,4 @@
-import com.sistemalocacao.SisLoc;
+import SistemaLocacao.UI.SisLoc;
 import javax.swing.*;
 import java.awt.*;
 

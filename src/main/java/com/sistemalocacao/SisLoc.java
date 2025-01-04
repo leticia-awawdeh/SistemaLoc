@@ -24,6 +24,18 @@ private final List<Cliente> clientes;
         CadastroClienteUI cadastroCliente = new CadastroClienteUI();
         panelSis.addTab("Cadastro de Cliente", cadastroCliente.getPanel());
         
+        EquipamentoUI cadastroEquip = new EquipamentoUI();
+        panelSis.addTab("Cadastro de Equipamentos", cadastroEquip.getPanel());
+        
+        LocacaoUI locacaoEquip = new LocacaoUI();
+        panelSis.addTab("Locação de Equipamentos", locacaoEquip.getPanel());
+        
+        DevolucaoEquipUI devolucaoEquip = new DevolucaoEquipUI();
+        panelSis.addTab("Devolução de Equipamentos", devolucaoEquip.getPanel());
+        
+        GerarRelatorioUI gerarRelatorio = new GerarRelatorioUI();
+        panelSis.addTab("Gerar Relatório", gerarRelatorio.getPanel());
+        
         setContentPane(panelSis);
         setTitle("Sistema de Locação de Equipamentos");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
